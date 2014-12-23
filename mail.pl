@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # if your auth failed,
 # try sudo apt-get install libauthen-sasl-perl
@@ -16,8 +16,7 @@ sub sendMail {
 
 	my $from = "From: $mailUser\n";
 	my $subject = "Subject: a test\n";
-	
-	my $message .= "hello world\n";
+	my $message = "hello world\n";
 
 	my $smtp = Net::SMTP->new($mailServer);
 
